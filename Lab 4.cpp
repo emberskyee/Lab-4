@@ -55,12 +55,14 @@ public:
         for (int i = 0; i < 5; ++i) {
             for (int j = 0; j < 5; ++j) {
                 seasonEpisodeRunTime[i][j] = runtime[i][j];
+            }
+        }
         return;
     }
     // Functions
     void detailsFunctionality(StreamingService obj) {
         tvShow::detailsFunctionality();
-        cout << "Run time of first episode of first season: " << SeasonEpisodeRunTime[0][0] << " minutes." << endl;
+        cout << "Run time of first episode of first season: " << seasonEpisodeRunTime[0][0] << " minutes." << endl;
     }
 
     void PlayFunctionality() override {
@@ -69,7 +71,7 @@ public:
         cin >> season;
         cout << "Enter episode number: ";
         cin >> episode;
-        cout << "Run time of selected episode: " << SeasonEpisodeRunTime[season - 1][episode - 1] << " minutes" << endl;
+        cout << "Run time of selected episode: " << seasonEpisodeRunTime[season - 1][episode - 1] << " minutes" << endl;
     }
     // Default constructor
     tvShows() {}
